@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Curso
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <h1 class="negrito colorido">Curso de Ionic</h1>
+    <ion-button color="dark" expand="full" shape="round" (click)="addPedido()">
+      <ion-icon name="american-football"></ion-icon>
+      Click
+    </ion-button>
+
+    <ion-item>
+      <ion-label>Pedidos</ion-label>
+      <ion-badge slot="end">{{ pedidos }}</ion-badge>
+    </ion-item>
+    <span id="lblQuantidade" class="negrito">{{ pedidos }}</span>
+  </div>
+</ion-content>
