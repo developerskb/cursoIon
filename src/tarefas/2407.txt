@@ -1,0 +1,28 @@
+Routing
+
+Injeção de dependencias:
+ - ActivatedRoute
+ - Router
+
+Navegação
+arquivo ts:
+    this.router.navigateByUrl('relativeUrl')
+
+arquivo html:
+    <ion-button expand="full" routerLink="/home" routerDirection="forward">
+
+Get Parametros de url
+    this.activatedRoute.snapshot.paramMap.get('paramName')
+
+Voltar <- 
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/page"></ion-back-button>
+  </ion-buttons>
+  <ion-title>Details</ion-title>
+</ion-toolbar>
+
+TAREFAS
+
+- Implementar o botão de voltar no seus home
+- Fazer chamadas para os componentes do grupo

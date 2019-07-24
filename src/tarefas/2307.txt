@@ -7,6 +7,6 @@ para fazer as páginas visíveis
 
 TAREFA
 Criar o Home do modulo de cada um
->ionic generate page nomeDoModulo/nomeHome
+>ionic generate page nomeDoModulo/nomeHome 
 Alterar o nome-home.page.html
 Subir as alterações no git

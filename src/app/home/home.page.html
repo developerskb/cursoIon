@@ -9,16 +9,13 @@
 <ion-content>
   <div class="ion-padding">
     <h1 class="negrito colorido">Curso de Ionic do Victor</h1>
-    <ion-button color="dark" expand="full" shape="round" (click)="addPedido()">
-      <ion-icon name="american-football"></ion-icon>
-      Click
-    </ion-button>
-
-    
+    <h2>Participantes</h2>
     <ion-item>
-      <ion-label>Pedidos</ion-label>
-      <ion-badge slot="end">{{ pedidos }}</ion-badge>
+      <ion-button (click)="paginaRodrigo()">Rodrigo</ion-button>
     </ion-item>
-    <span id="lblQuantidade" class="negrito">{{ pedidos }}</span>
+    <ion-item>
+      <ion-button routerLink="/raimo-home">Raimo</ion-button>
+      <a routerLink="/raimo-home/flamengo">Raimo</a>
+    </ion-item>
   </div>
 </ion-content>
