@@ -1,0 +1,33 @@
+Interface e Classe
+
+Modelar entidades do sistema. Qualquer objeto relevante no logica de negocio.
+
+    ionic generate Interface nomeModulo/nomeInterface
+
+Abstração de informações ou campos. Mapeamento da modelagem do sistema ou banco de dados
+Classe pode implementar uma interface.
+
+diretiva *ngIf, verificar alguma condição logica. negação '!'
+    <span *ngIf="usuarioLogado">Usuário: {{ usuarioLogado.email }}</span>    
+    <span *ngIf="!usuarioLogado">Login</span>
+verifica se o usuario logado é diferente de undefined ou null    
+
+Services
+
+Funções que podem ser reutilizadas por diferentes pages e outros services
+    ionic generate service nomeModulo/nomeService
+
+São declarados por Injeção de Dependencia
+
+TS, javascript
+
+
+*****TAREFA*****
+Implementar a lista de usuarios cadastrados
+ex. home.page.html
+
+    <h2>Usuario cadastrados</h2>
+    <ion-item *ngFor="let cadastrado of usuarios">
+      {{ cadastrado.email }} - {{ cadastrado.horaLogin }}
+      <ion-button slot="end" fill="clear">Editar</ion-button>
+    </ion-item>
