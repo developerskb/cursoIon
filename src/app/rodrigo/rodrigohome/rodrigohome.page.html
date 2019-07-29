@@ -1,14 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title><rodrigohome</ion-title>
+    <ion-buttons slot="start">
+        <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Página Inicial Rodrigo</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <h1><p>Rodrigo Regaz</p></h1>
-  <ion-button color="danger">Pare</ion-button>
-  <ion-button color="warning">Pense</ion-button>
-  <ion-button color="success">Siga</ion-button>
-  
-
+    <div class="ion-passing" margin= 10>
+      <h2>Veja também:</h2>
+      <ion-item>
+        <ion-button color="primary" (click)="paginaMarcelo()">Marcelo</ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-button color="medium" (click)="paginaRaimo()">Raimo</ion-button>
+      </ion-item>
+      <ion-item>
+          <ion-button color="tertiary" (click)="paginaVictor()">Victor</ion-button>
+        </ion-item>
+      <ion-item>
+          <ion-button color="success" (click)="paginaRobson()">Robson</ion-button>
+      </ion-item>
+    </div>
 </ion-content>
