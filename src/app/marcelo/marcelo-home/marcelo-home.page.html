@@ -17,5 +17,20 @@
       <ion-button color="dark" (click)="paginaRaimo()">Raimo</ion-button>
     </ion-item>
   </div>
+  <div class="ion-passing" margin= 10>
+    <h2>Controle de Uuários:</h2>
+      <ion-item>
+        <ion-button (click)="verificaUsuario()">Verificar Status Usuário 1</ion-button>
+        <ion-button (click)="logoffTodos()">Deslogar Todos</ion-button>
+      </ion-item>
+      
+      <h2>Usuario cadastrados:</h2>
+      <ion-item *ngFor="let cadastrado of usuarios">
+        {{ cadastrado.nome}} - {{ cadastrado.email }} - {{ cadastrado.horaLogin }}
+        <ion-button *ngIf="cadastrado.horaLogin" slot="end" fill="clear" (click)="logoffUsuario(cadastrado.id)">Sair</ion-button>
+        <ion-button *ngIf="!cadastrado.horaLogin" slot="end" fill="clear" (click)="loginUsuario(cadastrado.id)">Login</ion-button>
+      </ion-item>      
+
+  </div>
 
 </ion-content>
