@@ -7,8 +7,10 @@ const routes: Routes = [
   { path: 'victor-home', loadChildren: './victor/victor-home/victor-home.module#VictorHomePageModule' },
   { path: 'rodrigohome', loadChildren: './rodrigo/rodrigohome/rodrigohome.module#RodrigohomePageModule' },
   { path: 'raimo-home', loadChildren: './raimo/raimo-home/raimo-home.module#RaimoHomePageModule' },
-  { path: 'raimo-home/:time', loadChildren: './raimo/raimo-home/raimo-home.module#RaimoHomePageModule' },  { path: 'marcelo-home', loadChildren: './marcelo/marcelo-home/marcelo-home.module#MarceloHomePageModule' },
-
+  { path: 'raimo-home/:time', loadChildren: './raimo/raimo-home/raimo-home.module#RaimoHomePageModule' },
+  { path: 'robson-home', loadChildren: './robson/robson-home/robson-home.module#RobsonHomePageModule' },
+  { path: 'raimo-home/:time', loadChildren: './raimo/raimo-home/raimo-home.module#RaimoHomePageModule' },
+  { path: 'marcelo-home', loadChildren: './marcelo/marcelo-home/marcelo-home.module#MarceloHomePageModule' },
 
 ];
 
