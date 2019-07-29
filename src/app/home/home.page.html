@@ -9,6 +9,15 @@
 <ion-content>
   <div class="ion-padding">
     <h1 class="negrito colorido">Curso de Ionic do Victor</h1>
+    <span *ngIf="usuarioLogadoNaClasse">Usuário: {{ usuarioLogadoNaClasse.email }}</span>    
+    <span *ngIf="!usuarioLogadoNaClasse">Login</span>
+
+    <h2>Usuario cadastrados</h2>
+    <ion-item *ngFor="let cadastrado of usuarios">
+      {{ cadastrado.email }} - {{ cadastrado.horaLogin }}
+      <ion-button slot="end" fill="clear">Editar</ion-button>
+    </ion-item>
+
     <h2>Participantes</h2>
     <ion-item>
       <ion-button (click)="paginaRodrigo()">Rodrigo</ion-button>
@@ -17,5 +26,9 @@
       <ion-button routerLink="/raimo-home">Raimo</ion-button>      
       <a routerLink="/raimo-home/flamengo">Raimo</a>      
     </ion-item>
+    <ion-item>
+      <ion-button routerLink="/marcelo-home">Marcelo</ion-button>
+    </ion-item>
+
   </div>
 </ion-content>
