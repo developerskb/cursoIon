@@ -4,6 +4,23 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <h2>Bem-vindo</h2>
+<ion-content padding>
+  <ion-chip>
+
+    <ion-avatar>
+      <img [src]="imagem">
+    </ion-avatar>
+    <ion-label>{{ nome }}</ion-label>
+  </ion-chip>
+
+  <ion-item>
+    <ion-thumbnail slot="start">
+      <img [src]="imagem">
+    </ion-thumbnail>
+    <ion-label>{{ nome }}</ion-label>
+  </ion-item>
+
+  <ion-button color="dark" size="small" expand="block" (click)="alerta()">Alerta</ion-button>
+  <ion-button color="warning" size="small" expand="block" (click)="toast('Finalizado!!')">Toast</ion-button>
+  <ion-button color="danger" size="small" expand="block" (click)="toast('Finalizado!!', 10000)">Toast Longo</ion-button>
 </ion-content>

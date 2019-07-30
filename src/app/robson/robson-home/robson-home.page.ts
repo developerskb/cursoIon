@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./robson-home.page.scss'],
 })
 export class RobsonHomePage implements OnInit {
+  router: any;
 
   constructor() { }
 
   ngOnInit() {
   }
-
+    
 }

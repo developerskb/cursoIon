@@ -1,9 +1,26 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>robsonHome</ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/home"></ion-back-button>
+        </ion-buttons>
+    <ion-title>Robson (Curso Ionic 4.0)</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-item>
+    <h1><p>Escolha o seu jogo</p></h1>
+<!--    <ion-img style="width: 300px; height: 150px;" src="Loterias.jpg"></ion-img> -->
+</ion-item>
+<ion-item>
+  <p><ion-button color="success"><ion-icon name="cash"></ion-icon>&nbsp;MEGA SENA</ion-button></p>
+</ion-item>
+<ion-item>
+  <p><ion-button color="dark" light > <ion-icon name="cash"></ion-icon>&nbsp;QUINA</ion-button></p>
+</ion-item>
+<ion-item>
+  <p>
+        <ion-button color="danger"><ion-icon name="cash"></ion-icon>&nbsp;LOTO FÁCIL</ion-button></p>
+</ion-item>
 
 </ion-content>
