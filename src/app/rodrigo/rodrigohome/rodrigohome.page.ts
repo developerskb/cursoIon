@@ -47,6 +47,6 @@ export class RodrigohomePage implements OnInit {
   }
   paginaRobson(){
     console.log('Ir para página do Robson');
-    this.router.navigateByUrl('robsonHome');
+    this.router.navigateByUrl('robson-home');
   }
 }

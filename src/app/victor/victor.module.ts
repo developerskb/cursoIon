@@ -7,4 +7,8 @@ import { CommonModule } from '@angular/common';
     CommonModule
   ]
 })
-export class VictorModule { }
+export class VictorModule { 
+
+  
+
+}
