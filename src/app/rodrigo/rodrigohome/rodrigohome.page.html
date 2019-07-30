@@ -8,10 +8,11 @@
 </ion-header>
 
 <ion-content>
-    <div class="ion-passing" margin= 10>
+    <div id="lbtitulo" class="ion-passing" margin= 10>
+      <h2 >Veja também:</h2>
       <h2>Veja também:</h2>
       <ion-item>
-        <ion-button color="primary" (click)="paginaMarcelo()">Marcelo</ion-button>
+        <ion-button (click)="paginaMarcelo()">Marcelo</ion-button>
       </ion-item>
       <ion-item>
         <ion-button color="medium" (click)="paginaRaimo()">Raimo</ion-button>
@@ -22,5 +23,12 @@
       <ion-item>
           <ion-button color="success" (click)="paginaRobson()">Robson</ion-button>
       </ion-item>
+    </div>
+    <div style="text-align: center;">
+      <h2 class="label-cor">Total</h2>
+      {{ num1 }}
+      <ion-input type="text" [(ngModel)]="incremento"></ion-input>
+      <ion-button (click)="somarClick()" class="label-cor">Somar</ion-button>
+      <a href="http://globo.com" target="_blank">Globo!</a>
     </div>
 </ion-content>
