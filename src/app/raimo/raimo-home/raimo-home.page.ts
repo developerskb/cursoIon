@@ -1,25 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
 @Component({
   selector: 'app-raimo-home',
   templateUrl: './raimo-home.page.html',
   styleUrls: ['./raimo-home.page.scss'],
 })
 export class RaimoHomePage implements OnInit {
-  //escopo global. de classe
-  total: number = 0;
-  incremento: string = '0';
+    //variavel que armazena o nome do usuario
+    nome: string = 'Gabriel Barbosa';
+    //variavel que armazena o caminho da imagem
+    imagem: string = 'assets/usuarios/GABIGOL.JPG';
 
   constructor(private router: Router) {
   }
 
+
   ngOnInit() {
   }  
 
-  somarClick(): void {
-    this.total = this.total + this.somar(10, parseInt(this.incremento));
-  }
 
   //parametros num1, num2
   //escopo local, de função
@@ -33,8 +31,7 @@ export class RaimoHomePage implements OnInit {
     this.router.navigateByUrl('rodrigohome');
   }
 
-  paginaMarcelo() {
-    this.total = 0;
+  paginaMarcelo(){
 
     console.log('Ir para a página do Marcelo');
     this.router.navigateByUrl('marcelo-home');
