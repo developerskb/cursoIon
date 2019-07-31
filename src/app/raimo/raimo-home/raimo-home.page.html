@@ -1,19 +1,38 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Raimo Curso</ion-title>
+      <ion-buttons slot="start">
+          <ion-back-button defaultHref="/home"></ion-back-button>
+      </ion-buttons>
+    <ion-title>RAIMO</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <h1><p>VOTE AQUI</p></h1>
+  <div>
+  <h1><p>PAGINA RUBRO NEGRA</p></h1>
   <ion-item>
-    <ion-button color="success">CONFIRMA</ion-button>
+    <ion-button color="danger" (click)="paginaRodrigo()">Rodrigo</ion-button>
   </ion-item>
   <ion-item>
-    <ion-button color="warning">CORRIGE</ion-button>
+    <ion-button color="dark" (click)="paginaMarcelo()">Marcelo</ion-button>
   </ion-item>
   <ion-item>
-    <ion-button color="white">BRANCO</ion-button>
+      <ion-button color="danger" (click)="paginaVictor()">Victor</ion-button>
+    </ion-item>
+  <ion-item>
+      <ion-button color="dark" (click)="paginaRobson()">Robson</ion-button>
   </ion-item>
+  <div>
+  <a href="https://www.flamengo.com.br/" target="_blank" style="color: black">Flamengo</a>
+  </ion-item>
+  <img style="width: 200px;" src="assets/flamengo.jpg" />
+  </div>
+  <div style="text-align: center;">
+      <h2 class="label-cor">Total</h2>
+      {{ num1 }}
+      <ion-input type="text" [(ngModel)]="incremento"></ion-input>
+      <ion-button color="danger" (click)="somarClick()" class="label-cor">Somar</ion-button>
+  </div>
+
   
 </ion-content>
