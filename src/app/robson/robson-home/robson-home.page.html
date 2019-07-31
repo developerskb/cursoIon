@@ -1,26 +1,60 @@
 <ion-header>
   <ion-toolbar>
-      <ion-buttons slot="start">
-          <ion-back-button defaultHref="/home"></ion-back-button>
-        </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
     <ion-title>Robson (Curso Ionic 4.0)</ion-title>
   </ion-toolbar>
 </ion-header>
+<ion-item>
+  <ion-chip color="secondary">
+    <ion-avatar>
+      <img src="assets/usuarios/robson.jpg">
+    </ion-avatar>
+    <ion-label color='tertiary'>Robson</ion-label>
+    <ion-icon name="paw"></ion-icon>
+  </ion-chip>
+</ion-item>
+<ion-item>
+  <ion-chip color="success">
+    <ion-icon name="finger-print"></ion-icon>
+    <ion-label color='danger'>Robson</ion-label>
+    <ion-avatar>
+      <img src="assets/usuarios/robson.jpg">
+    </ion-avatar>
+  </ion-chip>
+</ion-item>
 
 <ion-content>
   <ion-item>
-    <h1><p>Escolha o seu jogo</p></h1>
-<!--    <ion-img style="width: 300px; height: 150px;" src="Loterias.jpg"></ion-img> -->
-</ion-item>
-<ion-item>
-  <p><ion-button color="success"><ion-icon name="cash"></ion-icon>&nbsp;MEGA SENA</ion-button></p>
-</ion-item>
-<ion-item>
-  <p><ion-button color="dark" light > <ion-icon name="cash"></ion-icon>&nbsp;QUINA</ion-button></p>
-</ion-item>
-<ion-item>
-  <p>
-        <ion-button color="danger"><ion-icon name="cash"></ion-icon>&nbsp;LOTO FÁCIL</ion-button></p>
-</ion-item>
+    <h1>
+      <p>Escolha o seu jogo</p>
+    </h1>
+    <!--    <ion-img style="width: 300px; height: 150px;" src="Loterias.jpg"></ion-img> -->
+  </ion-item>
+  <ion-item>
+    <p>
+      <ion-button color="success">
+        <ion-icon name="cash"></ion-icon>&nbsp;MEGA SENA
+      </ion-button>
+    </p>
+  </ion-item>
+  <ion-item>
+    <p>
+      <ion-button color="dark" light>
+        <ion-icon name="cash"></ion-icon>&nbsp;QUINA
+      </ion-button>
+    </p>
+  </ion-item>
+  <ion-item>
+    <p>
+      <ion-button color="danger" (click)=''>
+        <ion-icon name="cash"></ion-icon>&nbsp;LOTO FÁCIL
+      </ion-button>
+      <a href="https://http://loterias.caixa.gov.br/wps/portal/loterias/landing/lotofacil/" target="_blank">Resultado</a>        
+      <a href="https://http://loterias.caixa.gov.br/wps/portal/loterias/landing/quina/" target="_blank">Resultado</a>        
+      <a href="https://http://loterias.caixa.gov.br/wps/portal/loterias/landing/megasena/" target="_blank">Resultado</a>                    
+    </p>
+  </ion-item>
 
 </ion-content>
