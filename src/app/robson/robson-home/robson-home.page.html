@@ -50,24 +50,35 @@
   </ion-item>
   <ion-item>
     <p>
-    <ion-button color="success" href="http://loterias.caixa.gov.br/wps/portal/loterias/landing/megasena/" target="_blank">
+      <ion-button color="success" href="http://loterias.caixa.gov.br/wps/portal/loterias/landing/megasena/"
+        target="_blank">
         <ion-icon name="cash"></ion-icon>&nbsp;MEGA SENA
       </ion-button>
 
-      <ion-button color="dark" light href="http://loterias.caixa.gov.br/wps/portal/loterias/landing/quina/" target="_blank">
+      <ion-button color="dark" light href="http://loterias.caixa.gov.br/wps/portal/loterias/landing/quina/"
+        target="_blank">
         <ion-icon name="cash"></ion-icon>&nbsp;QUINA
       </ion-button>
 
-      <ion-button color="tertiary" href="http://loterias.caixa.gov.br/wps/portal/loterias/landing/lotofacil/" target="_blank">
+      <ion-button color="tertiary" href="http://loterias.caixa.gov.br/wps/portal/loterias/landing/lotofacil/"
+        target="_blank">
         <ion-icon name="cash"></ion-icon>&nbsp;LOTO FÁCIL
       </ion-button>
 
     </p>
-    
+
   </ion-item>
-    <ion-item>
-      <ion-button color="danger" (click)="Robson_Alerta()">Alerta</ion-button>
-      <ion-button color="warning" (click)="Robson_Toast('Mensagem sem tempo')">Aviso sem tempo</ion-button>
-      <ion-button color="dark" (click)="Robson_Toast('Mensagem de 8 segundos',8)">Aviso com tempo</ion-button>
-    </ion-item>
+  <ion-item>
+    <ion-button color="danger" (click)="Robson_Alerta()">Alerta</ion-button>
+    <ion-button color="warning" (click)="Robson_Toast('Mensagem sem tempo')">Aviso sem tempo</ion-button>
+    <ion-button color="dark" (click)="Robson_Toast('Mensagem de 8 segundos',8)">Aviso com tempo</ion-button>
+  </ion-item>
+
+  <!--
+  <h2>Usuários cadastrados</h2>
+  <ion-item *ngFor="let cadastrado of usuarios">
+    {{ cadastrado.nome}} - {{ cadastrado.email }} - {{ cadastrado.horaLogin }}
+  </ion-item>
+-->
+
 </ion-content>

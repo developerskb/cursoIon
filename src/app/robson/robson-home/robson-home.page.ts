@@ -9,9 +9,18 @@ import { UtilsService } from 'src/app/services/utils.service';
 export class RobsonHomePage implements OnInit {
   router: any;
 
-  constructor(private funcoes: UtilsService) { }
+
+  
+
+  constructor(private funcoes: UtilsService) {
+     
+
+
+
+   }
 
   ngOnInit() {
+    
   }
 
 Robson_Alerta()
@@ -22,4 +31,17 @@ this.funcoes.showAlert('Alerta total!!!', 'Perigo');
 Robson_Toast(_mensagem: string, _segundos?: number){
   this.funcoes.showToast(_mensagem,_segundos ? _segundos*1000 : 5000);
 }
+
+/*    export class RobsonResultadosMegaSena {
+  Concurso: number;
+  Dezena01: number;
+  Dezena02: number;
+  Dezena03: number;
+  Dezena04: number;
+  Dezena05: number;
+  Dezena06: number;
+ 
+ }  
+
+ */
 }
