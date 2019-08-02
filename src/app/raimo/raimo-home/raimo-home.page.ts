@@ -1,23 +1,27 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { UtilsService } from 'src/app/services/utils.service';
 @Component({
   selector: 'app-raimo-home',
   templateUrl: './raimo-home.page.html',
   styleUrls: ['./raimo-home.page.scss'],
 })
 export class RaimoHomePage implements OnInit {
-    //variavel que armazena o nome do usuario
-    nome: string = 'Gabriel Barbosa';
-    //variavel que armazena o caminho da imagem
-    imagem: string = 'assets/usuarios/GABIGOL.JPG';
+  //variavel que armazena o nome do usuario
+  nome: string = 'Gabriel Barbosa';
+  //variavel que armazena o caminho da imagem
+  imagem: string = 'assets/usuarios/GABIGOL.JPG';
+
+  //escopo global. de classe
+  total: number = 0;
+  incremento: string = '0';
 
   constructor(private router: Router) {
   }
 
 
   ngOnInit() {
-  }  
-
+  }
 
   //parametros num1, num2
   //escopo local, de função
@@ -31,19 +35,19 @@ export class RaimoHomePage implements OnInit {
     this.router.navigateByUrl('rodrigohome');
   }
 
-  paginaMarcelo(){
+  paginaMarcelo() {
 
     console.log('Ir para a página do Marcelo');
     this.router.navigateByUrl('marcelo-home');
   }
-  paginaVictor(){
+  paginaVictor() {
     console.log('Ira para a página do Victor');
     this.router.navigateByUrl('victor-home');
   }
-  paginaRobson(){
+  paginaRobson() {
     console.log('Ir para página do Robson');
-    this.router.navigateByUrl('robson-home'); 
-  }  
-  
+    this.router.navigateByUrl('robson-home');
+  }
+
 
 }
