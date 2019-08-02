@@ -29,4 +29,10 @@ export class UtilsService {
     });
     await toast.present();
   }
+
+  //
+  eImpar(numero: number): boolean {
+    return numero % 2 != 0;
+  }
+
 }
