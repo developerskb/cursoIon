@@ -76,13 +76,13 @@
   <ion-item>
 <!--    
   C.P.F.: {{  usuariosCpfs[0].nome | cpfRobson }}; 
-  <ion-item *ngFor="lef meusUsuarios of usuariosCpfs">
+  <ion-item *ngFor="let meusUsuarios of usuariosCpfs">
       {{meusUsuarios.nome}} - {{meusUsuarios.cpf}}
   </ion-item>
     
 -->
- {{usuariosCpfs[0].nome}}
- {{usuariosCpfs[1].nome}}
+ {{usuariosCpfs[0].cpf | cpfRobson }} <br />
+ {{usuariosCpfs[1].cpf | cpfRobson }}
   </ion-item>
 
   <!--
