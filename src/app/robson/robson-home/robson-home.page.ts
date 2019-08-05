@@ -10,15 +10,25 @@ import { Router } from '@angular/router';
 export class RobsonHomePage implements OnInit {
   router: any;
   cidades: any[];
+  usuariosCpfs: any[]
+  meusUsuarios: any[];
+
+
 
   constructor(private funcoes: UtilsService,
     private routerService: Router) { }
 
   //https://ionicframework.com/docs/angular/lifecycle
   ngOnInit() {
-    this.cidades = [{ id: 11, cidade: 'sp'}, { id: 21, cidade: 'rg'}];
+
+    this.cidades = [{ id: 11, cidade: 'sp' }, { id: 21, cidade: 'rg' }];
+    this.usuariosCpfs = [{ nome: 'Robson', cpf: '25604669881'},{nome:'Adriano', cpf: '26235378791'},
+  {nome: 'Pereira', cpf: '1234567890'}, {nome: 'Brito', cpf: null}];
+
     //meu usuario
     console.log(this.funcoes.eImpar(99));
+    console.log(this.usuariosCpfs[1].nome.length);
+    console.log('teste');
   }
 
   ionViewWillEnter() {
@@ -26,16 +36,12 @@ export class RobsonHomePage implements OnInit {
 
   }
 
-  //formato de declaracao camelCase
   robsonAlerta() {
-    
-  }
-
-  Robson_Alerta() {
     this.funcoes.showAlert('Alerta total!!!', 'Perigo');
   }
 
-  Robson_Toast(_mensagem: string, _segundos?: number) {
+  RobsonToast(_mensagem: string, _segundos?: number) {
     this.funcoes.showToast(_mensagem, _segundos ? _segundos * 1000 : 5000);
   }
+
 }

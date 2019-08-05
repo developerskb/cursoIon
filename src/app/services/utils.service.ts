@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AlertController, ToastController } from '@ionic/angular';
+import { Estado } from '../model/estado';
 
 @Injectable({
   providedIn: 'root'
@@ -33,6 +34,16 @@ export class UtilsService {
   //
   eImpar(numero: number): boolean {
     return numero % 2 != 0;
+  }
+
+  //retorna lista com quatro estados
+  listarEstados(): Estado[] {
+    let resultado: Estado[] = [];
+    resultado.push({ nome: 'São Paulo', sigla: 'SP' });
+    resultado.push({ nome: 'Rio de Janeiro', sigla: 'RJ' });
+    resultado.push({ nome: 'Minas Gerais', sigla: 'MG' });
+    resultado.push({ nome: 'Mato Grosso', sigla: 'MT' });
+    return resultado;
   }
 
 }

@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { RobsonHomePage } from './robson-home.page';
+import { PipesModule } from 'src/app/pipes/pipes.module';
 
 const routes: Routes = [
   {
@@ -17,9 +18,11 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    PipesModule,
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes)
+     
   ],
   declarations: [RobsonHomePage]
 })

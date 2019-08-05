@@ -1,0 +1,91 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cadastro de Funcionários</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label color="danger" position="floating">Nome</ion-label>
+    <ion-input type="text" placeholder="Digite seu nome completo"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked"></ion-label>    
+    <ion-datetime displayFormat="DD/MM/YYYY" placeholder="Selecione uma data"></ion-datetime>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Data de Nascimento</ion-label>    
+    <ion-input style="width: 200px;" type="date" placeholder="Selecione uma data"></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-radio-group>
+      <ion-list-header>
+        Sexo
+      </ion-list-header>  
+      <ion-item>
+        <ion-label>Masculino</ion-label>
+        <ion-radio value="M" checked="true"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Feminino</ion-label>
+        <ion-radio value="F"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Outro</ion-label>
+        <ion-radio value="O"></ion-radio>
+      </ion-item>
+    </ion-radio-group>  
+  </ion-list>
+
+  <ion-item>
+    <ion-label position="stacked">E-mail</ion-label>
+    <ion-input type="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Gerente</ion-label>
+    <ion-checkbox></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Salario</ion-label>
+    <ion-input type="number" increment="0.1"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Observações</ion-label>
+    <ion-textarea rows="6" cols="20"></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Estado</ion-label>
+    
+    <ion-select placeholder="Selecionar...">
+      <ion-select-option value="SP">São Paulo</ion-select-option>
+      <ion-select-option value="RJ">Rio de Janeiro</ion-select-option>
+      <ion-select-option value="MG">Minas Gerais</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="stacked">Estado</ion-label>    
+    <ion-select placeholder="Selecionar...">
+      <ion-select-option *ngFor="let uf of estados" value="uf.sigla">{{ uf.sigla }} - {{ uf.nome }}</ion-select-option>      
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <select name="cars">
+      <option *ngFor="let uf of estados" value="uf.sigla">{{ uf.sigla }} - {{ uf.nome }}</option>
+    </select>
+  </ion-item>
+
+</ion-content>
+
+<ion-footer>
+
+</ion-footer>
