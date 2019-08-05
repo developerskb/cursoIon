@@ -22,7 +22,7 @@
       <ion-button color="danger" (click)="paginaVictor()">Victor</ion-button>
     </ion-item>
     <ion-item>
-      <ion-button color="dark" (click)="paginaRobson()">Robson</ion-button>
+      <ion-button color="dark" routerLink="/robson-home">Robson</ion-button>
     </ion-item>
     <img style="width: 150px;" src="assets/flamengo.jpg" />
     <img src="assets/paqueta.gif">
@@ -40,8 +40,13 @@
     <ion-label>{{ nome }}</ion-label>
 
   </ion-chip>
-
-  <ion-button color="success" size="small" expand="block" (click)="alerta()">FLAMENGO</ion-button>
-  <ion-button color="warning" size="small" expand="block" (click)="toast('Finalizado!!')">CAMPEÃO</ion-button>
-  <ion-button color="primary" size="small" expand="block" (click)="toast('Finalizado!!', 10000)">1981</ion-button>
+  <div style="text-align: center;">
+    <ion-button color="danger" size="small" (click)="alerta()">FLAMENGO</ion-button>
+  </div>
+  <div style="text-align: center;">
+    <ion-button color="dark" size="small" (click)="toast('Finalizado!!')">CAMPEÃO</ion-button>
+  </div>
+  <div style="text-align: center;">
+    <ion-button color="danger" size="small" (click)="toast('Finalizado!!', 10000)">1981</ion-button>
+  </div> 
 </ion-content>
