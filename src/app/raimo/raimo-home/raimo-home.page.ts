@@ -11,7 +11,7 @@ export class RaimoHomePage implements OnInit {
   nome: string = 'Gabriel Barbosa';
   //variavel que armazena o caminho da imagem
   imagem: string = 'assets/usuarios/GABIGOL.JPG';
-
+  
   //escopo global. de classe
   total: number = 0;
   incremento: string = '0';
@@ -22,6 +22,7 @@ export class RaimoHomePage implements OnInit {
 
   ngOnInit() {
   }
+
 
   //parametros num1, num2
   //escopo local, de função
