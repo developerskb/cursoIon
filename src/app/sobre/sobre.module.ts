@@ -5,25 +5,22 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { RobsonHomePage } from './robson-home.page';
-import { PipesModule } from 'src/app/pipes/pipes.module';
+import { SobrePage } from './sobre.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: RobsonHomePage
+    component: SobrePage
   }
 ];
 
 @NgModule({
   imports: [
     CommonModule,
-    PipesModule,
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes)
-     
   ],
-  declarations: [RobsonHomePage]
+  declarations: [SobrePage]
 })
-export class RobsonHomePageModule {}
+export class SobrePageModule {}

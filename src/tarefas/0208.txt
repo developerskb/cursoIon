@@ -1,0 +1,19 @@
+Ciclo de vida da pagina Ionic
+https://ionicframework.com/docs/angular/lifecycle
+
+Pipes
+Funções para transformação/visualização
+
+ex. ionic generate pipe pipes/titulo
+
+//TAREFA
+
+Criar pipe cpfNome
+ex: ionic generate pipe pipes/cpfRaimo
+
+pipes.module.ts
+declarations: [cpfRaimo]
+exports: [cpfRaimo]
+
+raimo-home.module.ts
+imports: [PipesModule]

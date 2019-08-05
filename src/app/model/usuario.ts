@@ -15,6 +15,7 @@ export class UsuarioLogado implements Usuario {
 
     horaLogin: string;
     token: string;
+    sexo: string;
 
 
     constructor(_horaLogin: string, _token: string) {
@@ -33,6 +34,7 @@ export class UsuarioSuperLogado implements UsuarioLogado {
     horaLogin: string;
     token: string;
 
+    sexo:string;
     celularFormatado: string;
     constructor()  {
 
