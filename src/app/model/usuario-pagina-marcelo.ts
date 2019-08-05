@@ -4,6 +4,7 @@ export interface UsuarioPaginaMarcelo {
     email: string;
     adm: boolean;
     celular?: string; // ? = Opcional
+    foto?: string;
 }
 
 export class UsuarioLogadoPagMarcelo implements UsuarioPaginaMarcelo{
@@ -12,6 +13,7 @@ export class UsuarioLogadoPagMarcelo implements UsuarioPaginaMarcelo{
     email: string;
     adm: boolean;
     celular?: string; // ? = Opcional
+    foto?: string;
 
     horaLogin: string;
     token: string;

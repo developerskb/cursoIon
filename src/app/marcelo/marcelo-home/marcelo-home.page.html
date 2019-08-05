@@ -3,12 +3,28 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
-    <ion-title>Pagina do Negão</ion-title>
+    <ion-title>Pagina do Negão
+      <ion-chip>
+        <ion-avatar>
+          <img [src]="imagem1">
+        </ion-avatar>
+        <ion-avatar>
+          <img [src]="imagem2">
+        </ion-avatar>
+        <ion-avatar>
+          <img [src]="imagem3">
+        </ion-avatar>
+        <ion-avatar>
+          <img [src]="imagem4">
+        </ion-avatar>
+      </ion-chip>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="ion-passing" margin= 10>
+
+  <div class="ion-passing" margin=10>
     <h2>Visite Outros Participantes:</h2>
     <ion-item>
       <ion-button color="dark" (click)="paginaRodrigo()">Rodrigo</ion-button>
@@ -17,20 +33,45 @@
       <ion-button color="dark" (click)="paginaRaimo()">Raimo</ion-button>
     </ion-item>
   </div>
-  <div class="ion-passing" margin= 10>
-    <h2>Controle de Uuários:</h2>
-      <ion-item>
-        <ion-button (click)="verificaUsuario()">Verificar Status Usuário 1</ion-button>
-        <ion-button (click)="logoffTodos()">Deslogar Todos</ion-button>
-      </ion-item>
-      
-      <h2>Usuario cadastrados:</h2>
-      <ion-item *ngFor="let cadastrado of usuarios">
-        {{ cadastrado.nome}} - {{ cadastrado.email }} - {{ cadastrado.horaLogin }}
-        <ion-button *ngIf="cadastrado.horaLogin" slot="end" fill="clear" (click)="logoffUsuario(cadastrado.id)">Sair</ion-button>
-        <ion-button *ngIf="!cadastrado.horaLogin" slot="end" fill="clear" (click)="loginUsuario(cadastrado.id)">Login</ion-button>
-      </ion-item>      
-
+  <div class="ion-passing" margin=10>
+    <h2>Usuario cadastrados:</h2>
+    <ion-item *ngFor="let cadastrado of usuarios">
+      <ion-chip (click)='detalheUusario(cadastrado.id)'>
+        <ion-avatar>
+          <img [src]="cadastrado.foto">
+        </ion-avatar>
+        <ion-label>
+          {{ cadastrado.nome}} - {{ cadastrado.email }} - {{ cadastrado.horaLogin }}
+        </ion-label>
+      </ion-chip>
+      <ion-button *ngIf="cadastrado.horaLogin" slot="end" fill="clear" (click)="logoffUsuario(cadastrado.id)">Sair
+      </ion-button>
+      <ion-button *ngIf="!cadastrado.horaLogin" slot="end" fill="clear" (click)="loginUsuario(cadastrado.id)">Login
+      </ion-button>
+    </ion-item>
+    <h6>Controle de Uuários:</h6>
+    <ion-item>
+      <ion-buttons>
+        <ion-button (click)="verificaUsuario()">
+          <ion-icon name='clipboard' slot="icon-only"></ion-icon>
+        </ion-button>
+        <ion-button (click)="logoffTodos()">
+          <ion-icon name='exit' slot='icon-only'></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </div>
+  <div>
+      <ion-card>
+        <img style="width: 10%;" src="assets/fabricaapp.png" alt="LogoAppFactory">
+        <ion-card-header>
+          <ion-card-subtitle>KB Solution</ion-card-subtitle>
+          <ion-card-title>APP Factory</ion-card-title>
+        </ion-card-header>
+        <ion-card-content fullscreen>
+          apresentação
+        </ion-card-content>
+      </ion-card>
   </div>
 
 </ion-content>
