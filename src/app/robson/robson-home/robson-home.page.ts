@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 export class RobsonHomePage implements OnInit {
   router: any;
   cidades: any[];
-  usuariosCpfs: any[];
+  usuariosCpfs: any[]
+  meusUsuarios: any[];
 
 
 
@@ -21,7 +22,9 @@ export class RobsonHomePage implements OnInit {
   ngOnInit() {
 
     this.cidades = [{ id: 11, cidade: 'sp' }, { id: 21, cidade: 'rg' }];
-    this.usuariosCpfs = [{ nome: 'Robson', cpf: '25604669881'},{nome:'Adriano', cpf: '26235378791'}];
+    this.usuariosCpfs = [{ nome: 'Robson', cpf: '25604669881'},{nome:'Adriano', cpf: '26235378791'},
+  {nome: 'Pereira', cpf: '1234567890'}, {nome: 'Brito', cpf: null}];
+
     //meu usuario
     console.log(this.funcoes.eImpar(99));
     console.log(this.usuariosCpfs[1].nome.length);

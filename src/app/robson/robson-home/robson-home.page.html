@@ -73,17 +73,12 @@
     <ion-button color="warning" (click)="robsonToast('Mensagem sem tempo')">Aviso sem tempo</ion-button>
     <ion-button color="dark" (click)="robsonToast('Mensagem de 8 segundos',8)">Aviso com tempo</ion-button>
   </ion-item>
-  <ion-item>
-<!--    
-  C.P.F.: {{  usuariosCpfs[0].nome | cpfRobson }}; 
+ 
   <ion-item *ngFor="let meusUsuarios of usuariosCpfs">
-      {{meusUsuarios.nome}} - {{meusUsuarios.cpf}}
+      {{meusUsuarios.nome}} - {{meusUsuarios.cpf}} - {{meusUsuarios.cpf | cpfRobson}} 
   </ion-item>
     
--->
- {{usuariosCpfs[0].cpf | cpfRobson }} <br />
- {{usuariosCpfs[1].cpf | cpfRobson }}
-  </ion-item>
+
 
   <!--
   <h2>Usuários cadastrados</h2>
