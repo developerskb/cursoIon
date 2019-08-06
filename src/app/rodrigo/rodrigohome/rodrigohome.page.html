@@ -1,38 +1,30 @@
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
-        <ion-back-button defaultHref="/home"></ion-back-button>
+      <ion-back-button defaultHref="/home"></ion-back-button>
     </ion-buttons>
     <ion-title>Página Inicial Rodrigo</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <div id="lbtitulo" class="ion-passing" margin= 10>
-      <h2 >Veja também:</h2>
-      <h2>Veja também:</h2>
-      <ion-item>
-        <ion-button (click)="paginaMarcelo()">Marcelo</ion-button>
-      </ion-item>
-      <ion-item>
-        <ion-button color="medium" (click)="paginaRaimo()">Raimo</ion-button>
-      </ion-item>
-      <ion-item>
-          <ion-button color="tertiary" (click)="paginaVictor()">Victor</ion-button>
-        </ion-item>
-      <ion-item>
-          <ion-button color="success" (click)="paginaRobson()">Robson</ion-button>
-      </ion-item>
-      <img style="width: 150px;" src="assets/flamengo.jpg" />
-      <img src="assets/paqueta.gif">
-    </div>
-    <div style="text-align: center;">
-      <h2 class="label-cor">Total</h2>
-      {{ num1 }}
-      <ion-input type="text" [(ngModel)]="incremento"></ion-input>
-      <ion-button (click)="somarClick()" class="label-cor">Somar</ion-button>
-      <!--
-      <a href="http://globo.com" target="_blank">Globo!</a>
-      -->
-    </div>
+  <ion-avatar>
+    <img src="assets/usuarios/rodrigo.jpg">
+  </ion-avatar>
+  <ion-chip>
+    <ion-label color='dark'>Rodrigo Regaz</ion-label>
+    <ion-icon></ion-icon>
+  </ion-chip>
+  <h2>Veja também:</h2>
+  <ion-item>
+    <ion-button (click)="paginaMarcelo()">Marcelo</ion-button>
+    <ion-button color="medium" (click)="paginaRaimo()">Raimo</ion-button>
+    <ion-button color="tertiary" (click)="paginaVictor()">Victor</ion-button>
+    <ion-button color="dark" (click)="paginaRobson()">Robson</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-button color="danger" (click)="rodrigo_Alerta()">Pare</ion-button>
+    <ion-button color="warning">Pense</ion-button>
+    <ion-button color="success">Siga</ion-button>
+  </ion-item>
 </ion-content>

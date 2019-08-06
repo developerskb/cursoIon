@@ -18,10 +18,6 @@ export class RodrigohomePage implements OnInit {
   ngOnInit() {
   }  
 
-  somarClick(): void {
-    this.total = this.total + this.somar(10, parseInt(this.incremento));
-  }
-
   //parametros num1, num2
   //escopo local, de função
   somar(num1: number, num2: number): number {

@@ -10,8 +10,11 @@ const routes: Routes = [
   { path: 'raimo-home/:time', loadChildren: './raimo/raimo-home/raimo-home.module#RaimoHomePageModule' },
   { path: 'robson-home', loadChildren: './robson/robson-home/robson-home.module#RobsonHomePageModule' },
   { path: 'raimo-home/:time', loadChildren: './raimo/raimo-home/raimo-home.module#RaimoHomePageModule' },
-  { path: 'marcelo-home', loadChildren: './marcelo/marcelo-home/marcelo-home.module#MarceloHomePageModule' },  { path: 'sobre', loadChildren: './sobre/sobre.module#SobrePageModule' },
-  { path: 'victor-funcionario', loadChildren: './victor/victor-funcionario/victor-funcionario.module#VictorFuncionarioPageModule' },
+  { path: 'marcelo-home', loadChildren: './marcelo/marcelo-home/marcelo-home.module#MarceloHomePageModule' },
+  { path: 'sobre', loadChildren: './sobre/sobre.module#SobrePageModule' },
+  { path: 'victor-funcionario', loadChildren: './victor/victor-funcionario/victor-funcionario.module#VictorFuncionarioPageModule' },  { path: 'rodrigo-funcionario', loadChildren: './rodrigo/rodrigo-funcionario/rodrigo-funcionario.module#RodrigoFuncionarioPageModule' },
+
+
 
   
 ];
