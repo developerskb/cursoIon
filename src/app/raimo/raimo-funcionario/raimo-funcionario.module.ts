@@ -6,6 +6,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { RaimoFuncionarioPage } from './raimo-funcionario.page';
+// import { pipe } from 'rxjs';
+import { PipesModule } from 'src/app/pipes/pipes.module';
 
 const routes: Routes = [
   {
@@ -17,6 +19,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
+    PipesModule,
     FormsModule,
     IonicModule,
     RouterModule.forChild(routes)
