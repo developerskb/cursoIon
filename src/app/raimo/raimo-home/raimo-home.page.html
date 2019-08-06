@@ -50,4 +50,7 @@
   <div style="text-align: center;">
     <ion-button color="danger" size="small" (click)="toast('RESPEITA!!', 10000)">1981</ion-button>
   </div> 
+  <ion-item *ngFor="let ramigos of amigosRaimo">
+      {{ramigos.nome}} - {{ramigos.cpf}} - {{ramigos.cpf}} 
+  </ion-item>
 </ion-content>

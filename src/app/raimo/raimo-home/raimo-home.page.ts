@@ -31,7 +31,7 @@ export class RaimoHomePage implements OnInit {
 
   ngOnInit() {
     this.toast('SEJA BEM VINDO A PÁGINA RUBRO NEGRA');
-    this.amigosRaimo = [{nome: "Eduardo", cpf: "07980984145",{nome: "vitor", cpf: "80450245811"}];
+    this.amigosRaimo = [{nome: "Eduardo", cpf: "07980984145"},{nome: "vitor", cpf: "80450245811"}];
   }
 
 
