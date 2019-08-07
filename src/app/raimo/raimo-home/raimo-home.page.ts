@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UtilsService } from 'src/app/services/utils.service';
+import { UsuarioLogado } from 'src/app/model/usuario';
 @Component({
   selector: 'app-raimo-home',
   templateUrl: './raimo-home.page.html',
@@ -11,16 +12,26 @@ export class RaimoHomePage implements OnInit {
   nome: string = 'Gabriel Barbosa';
   //variavel que armazena o caminho da imagem
   imagem: string = 'assets/usuarios/GABIGOL.JPG';
-  
+
   //escopo global. de classe
   total: number = 0;
   incremento: string = '0';
 
-  constructor(private router: Router) {
+  dataNasc: Date = new Date(1980, 10, 23);
+
+  usuario: UsuarioLogado = new UsuarioLogado(null, null);
+
+  //variavel 
+  amigosRaimo: any[];
+
+  constructor(private router: Router,
+    private util: UtilsService) {
   }
 
 
   ngOnInit() {
+    this.toast('SEJA BEM VINDO A PÁGINA RUBRO NEGRA');
+    this.amigosRaimo = [{nome: "Eduardo", cpf: "07980984145"},{nome: "vitor", cpf: "80450245811"}];
   }
 
 
@@ -48,6 +59,18 @@ export class RaimoHomePage implements OnInit {
   paginaRobson() {
     console.log('Ir para página do Robson');
     this.router.navigateByUrl('robson-home');
+  }
+  /*
+  comentarios
+  de muitas linhas  
+  */
+
+  alerta() {
+    this.util.showAlert('SOU CAMPEÃO MUNDIAL', 'SOU FLAMENGO ');
+  }
+
+  toast(mensagem: string, duracao?: number) {
+    this.util.showToast(mensagem, duracao);
   }
 
 
