@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/marcelo-home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastro de Funcionarios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--Campos-->
+  <ion-item>
+    <ion-label position='floating'>Nome</ion-label>
+    <ion-input type='text'></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position='floating'>Dt Nascimento</ion-label>
+    <ion-input type='date' style='width: 200px;'></ion-input>
+  </ion-item>
+
+  <ion-list>
+    <ion-radio-group>
+      <ion-list-header>Sexo</ion-list-header>
+      <ion-item>
+        <ion-label>Masculino</ion-label>
+        <ion-radio value='M'></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Feminino</ion-label>
+        <ion-radio value='F'></ion-radio>
+      </ion-item>
+      <ion-item>
+        <ion-label>Outro</ion-label>
+        <ion-radio value='O' checked='True'></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-item>
+    <ion-label position='floating'>E-mail</ion-label>
+    <ion-input type='text'></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Gerente</ion-label>
+    <ion-checkbox ></ion-checkbox>
+  </ion-item>
+  <!--
+    gerente: boolean;
+    salario: number;
+    observacao: string;
+    telefone: string;
+    estado: Estado;
+
+  -->
+
+</ion-content>

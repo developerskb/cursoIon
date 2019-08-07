@@ -5,9 +5,11 @@
     </ion-buttons>
     <ion-title>Pagina do Negão
       <ion-chip>
+        <!--
         <ion-avatar>
           <img [src]="imagem1">
         </ion-avatar>
+        -->
         <ion-avatar>
           <img [src]="imagem2">
         </ion-avatar>
@@ -22,38 +24,46 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
 
-  <div class="ion-passing" margin=10>
-    <h2>Visite Outros Participantes:</h2>
+  <div class="ion-passing">
+    <h6>Visite Outros Participantes:</h6>
     <ion-item>
-      <ion-button color="dark" (click)="paginaRodrigo()">Rodrigo</ion-button>
+      <ion-button color="dark" (click)="paginaRodrigo()">RR</ion-button>
+      <ion-button color="dark" (click)="paginaRaimo()">RL</ion-button>
+      <ion-button color="dark" routerLink="/robson-home">RB</ion-button>
+      <ion-button color="dark" routerLink="/victor-home">VH</ion-button>
+      <ion-button color="dark" routerLink="/marcelo-funcionario" slot='end'>Func</ion-button>
     </ion-item>
-    <ion-item>
-      <ion-button color="dark" (click)="paginaRaimo()">Raimo</ion-button>
-    </ion-item>
+
+
   </div>
-  <div class="ion-passing" margin=10>
+  <div class="ion-passing">
     <h2>Usuario cadastrados:</h2>
     <ion-item *ngFor="let cadastrado of usuarios">
-      <ion-chip (click)='detalheUusario(cadastrado.id)'>
+      <ion-chip (click)='detalheUsario(cadastrado.id)'>
         <ion-avatar>
           <img [src]="cadastrado.foto">
         </ion-avatar>
         <ion-label>
-          {{ cadastrado.nome}} - {{ cadastrado.email }} - {{ cadastrado.horaLogin }}
+          <!--{{ cadastrado.nome}} - {{ cadastrado.email }} - {{ cadastrado.horaLogin }}-->
+          {{ cadastrado.nome}} - {{ cadastrado.statusLogin }}
         </ion-label>
       </ion-chip>
-      <ion-button *ngIf="cadastrado.horaLogin" slot="end" fill="clear" (click)="logoffUsuario(cadastrado.id)">Sair
-      </ion-button>
-      <ion-button *ngIf="!cadastrado.horaLogin" slot="end" fill="clear" (click)="loginUsuario(cadastrado.id)">Login
-      </ion-button>
+      <ion-chip *ngIf="cadastrado.horaLogin" (click)="logoffUsuario(cadastrado.id)" slot="end">
+        <ion-icon name="log-out"></ion-icon>
+      </ion-chip>
+      <ion-chip *ngIf="!cadastrado.horaLogin" (click)="loginUsuario(cadastrado.id)" slot="end">
+        <ion-icon name="log-in"></ion-icon>
+      </ion-chip>
+      <!--<ion-button *ngIf="cadastrado.horaLogin" slot="end" fill="clear" (click)="logoffUsuario(cadastrado.id)">Sair</ion-button>-->
+      <!--<ion-button *ngIf="!cadastrado.horaLogin" slot="end" fill="clear" (click)="loginUsuario(cadastrado.id)">Login</ion-button>-->
     </ion-item>
     <h6>Controle de Uuários:</h6>
     <ion-item>
       <ion-buttons>
         <ion-button (click)="verificaUsuario()">
-          <ion-icon name='clipboard' slot="icon-only"></ion-icon>
+          <ion-icon name='eye' slot="icon-only"></ion-icon>
         </ion-button>
         <ion-button (click)="logoffTodos()">
           <ion-icon name='exit' slot='icon-only'></ion-icon>
@@ -61,17 +71,26 @@
       </ion-buttons>
     </ion-item>
   </div>
+  <div class="ion-passing">
+    <h6>Testando o PIPE</h6>
+    <h5>Documentos dos usuários</h5>
+    <ion-item *ngFor="let userInfo of usuarios">
+      <ion-label>{{ userInfo.nome }} - {{ userInfo.cpf | cpfMarcelo}} </ion-label>
+    </ion-item>
+  </div>
   <div>
-      <ion-card>
-        <img style="width: 10%;" src="assets/fabricaapp.png" alt="LogoAppFactory">
-        <ion-card-header>
-          <ion-card-subtitle>KB Solution</ion-card-subtitle>
-          <ion-card-title>APP Factory</ion-card-title>
-        </ion-card-header>
-        <ion-card-content fullscreen>
-          apresentação
-        </ion-card-content>
-      </ion-card>
+    <ion-card>
+      <img style="width: 150px;" src="assets/ideias.png" alt="LogoAppFactory">
+      <!--fabricaapp.png-->
+      <ion-card-header>
+        <ion-card-subtitle>KB Solution</ion-card-subtitle>
+        <ion-card-title>APP Factory</ion-card-title>
+      </ion-card-header>
+      <ion-card-content fullscreen>
+        A KB Solution atualmente está focada em desenvolver APP para suas necessidades. Nossa missão é automatizar e
+        ajudar na operação, controle e gestão do seu negócio.
+      </ion-card-content>
+    </ion-card>
   </div>
 
 </ion-content>
