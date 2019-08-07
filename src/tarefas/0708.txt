@@ -1,0 +1,3 @@
+- Implementar função de validação para todos os campos de funcionario
+- Criar função para mostrar se o usuario é maior de 18 anos
+- Verificar se o email contem @, uma só

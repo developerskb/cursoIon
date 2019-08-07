@@ -7,8 +7,12 @@
 <ion-content padding>
 
   <ion-item>
-    <ion-label color="danger" position="floating">Nome</ion-label>
-    <ion-input type="text" placeholder="Digite seu nome completo"></ion-input>
+    <ion-label position="floating">Digite seu nome</ion-label>
+    <ion-input type="text" maxLength="20" [(ngModel)]="usuario.nome"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    {{ usuario.nome }}
   </ion-item>
 
   <ion-item>
@@ -22,13 +26,13 @@
   </ion-item>
 
   <ion-list>
-    <ion-radio-group>
+    <ion-radio-group [(ngModel)]="usuario.sexo">
       <ion-list-header>
         Sexo
       </ion-list-header>  
       <ion-item>
         <ion-label>Masculino</ion-label>
-        <ion-radio value="M" checked="true"></ion-radio>
+        <ion-radio value="M"></ion-radio>
       </ion-item>
       <ion-item>
         <ion-label>Feminino</ion-label>
@@ -64,7 +68,7 @@
   <ion-item>
     <ion-label position="stacked">Estado</ion-label>
     
-    <ion-select placeholder="Selecionar...">
+    <ion-select placeholder="Selecionar..." [(ngModel)]="usuario.estado">
       <ion-select-option value="SP">São Paulo</ion-select-option>
       <ion-select-option value="RJ">Rio de Janeiro</ion-select-option>
       <ion-select-option value="MG">Minas Gerais</ion-select-option>
@@ -83,6 +87,11 @@
       <option *ngFor="let uf of estados" value="uf.sigla">{{ uf.sigla }} - {{ uf.nome }}</option>
     </select>
   </ion-item>
+
+  
+    <ion-button expand="block" (click)="validar()">Salvar</ion-button>
+  
+  
 
 </ion-content>
 

@@ -16,6 +16,7 @@ export class UsuarioLogado implements Usuario {
     horaLogin: string;
     token: string;
     sexo: string;
+    estado: string;
 
 
     constructor(_horaLogin: string, _token: string) {
@@ -24,6 +25,7 @@ export class UsuarioLogado implements Usuario {
     }
 }
 
+/*
 export class UsuarioSuperLogado implements UsuarioLogado {
     id: number; //1,2,3,4,5,...2^32
     nome: string; //qualquer caracter alphanumerico ou especial
@@ -41,3 +43,4 @@ export class UsuarioSuperLogado implements UsuarioLogado {
     }
 
 }
+*/

@@ -46,4 +46,15 @@ export class UtilsService {
     return resultado;
   }
 
+  campoVazio(valor: string): boolean {    
+    if (valor == null || valor.trim() == '') {
+      return true;
+    } else {
+      return false;
+    }
+
+    //return (valor == null || valor == '') ? true : false;
+
+    //return valor == null || valor == '';
+  }
 }
