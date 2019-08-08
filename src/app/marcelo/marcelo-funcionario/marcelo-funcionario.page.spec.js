@@ -1,18 +1,18 @@
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, TestBed } from '@angular/core/testing';
-import { VictorHomePage } from './victor-home.page';
-describe('VictorHomePage', function () {
+import { MarceloFuncionarioPage } from './marcelo-funcionario.page';
+describe('MarceloFuncionarioPage', function () {
     var component;
     var fixture;
     beforeEach(async(function () {
         TestBed.configureTestingModule({
-            declarations: [VictorHomePage],
+            declarations: [MarceloFuncionarioPage],
             schemas: [CUSTOM_ELEMENTS_SCHEMA],
         })
             .compileComponents();
     }));
     beforeEach(function () {
-        fixture = TestBed.createComponent(VictorHomePage);
+        fixture = TestBed.createComponent(MarceloFuncionarioPage);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });
@@ -20,4 +20,4 @@ describe('VictorHomePage', function () {
         expect(component).toBeTruthy();
     });
 });
-//# sourceMappingURL=victor-home.page.spec.js.map
+//# sourceMappingURL=marcelo-funcionario.page.spec.js.map

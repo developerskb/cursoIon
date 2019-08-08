@@ -39,6 +39,7 @@ export class UtilsService {
   //retorna lista com quatro estados
   listarEstados(): Estado[] {
     let resultado: Estado[] = [];
+    resultado.push({ nome: null, sigla: null });
     resultado.push({ nome: 'São Paulo', sigla: 'SP' });
     resultado.push({ nome: 'Rio de Janeiro', sigla: 'RJ' });
     resultado.push({ nome: 'Minas Gerais', sigla: 'MG' });
