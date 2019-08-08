@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UsuarioLogadoPagMarcelo } from 'src/app/model/usuario-pagina-marcelo';
 import { UtilsService } from 'src/app/services/utils.service';
-import { PipesModule } from 'src/app/pipes/pipes.module';
 
 @Component({
   selector: 'app-marcelo-home',
@@ -10,14 +9,13 @@ import { PipesModule } from 'src/app/pipes/pipes.module';
   styleUrls: ['./marcelo-home.page.scss'],
 })
 export class MarceloHomePage implements OnInit {
-  // Declaração dos atributos para a classe MarceloHomePage
+  // Declaração dos atributos para a classe MarceloHomePage 
   usuarioLogado1 : UsuarioLogadoPagMarcelo;
   usuarios : UsuarioLogadoPagMarcelo[] = [];
   imagem1 : string = 'assets/usuarios/Celo1_3x4.jpg';
   imagem2 : string = 'assets/usuarios/Celo2_3x4.jpg';
   imagem3 : string = 'assets/usuarios/Celo3_3x4.jpg';
   imagem4 : string = 'assets/usuarios/Celo4_3x4.jpg';
-  cpfCnpjNumerico : string = '';
   // Construtor 
   constructor(
     private router: Router, 
