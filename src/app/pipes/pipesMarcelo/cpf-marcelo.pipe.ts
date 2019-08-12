@@ -14,7 +14,6 @@ export class CpfMarceloPipe implements PipeTransform {
         return value.substr(0,2) + '.' + value.substr(2,3) + '.' + value.substr(5,3) + '/' + value.substr(8,4) + '-' + value.substr(9,2);
       }
       else return 'CPF/CNPJ inválido';
-
     }
     else return 'Informar um número para formatação';
   }

@@ -5,4 +5,5 @@ describe('CpfMarceloPipe', () => {
     const pipe = new CpfMarceloPipe();
     expect(pipe).toBeTruthy();
   });
+  
 });
