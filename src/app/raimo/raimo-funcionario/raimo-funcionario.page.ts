@@ -18,20 +18,19 @@ export class RaimoFuncionarioPage implements OnInit {
 
 
   constructor(private funcoes: UtilsService,
-    private routerService: Router){ }
-    
-    ngOnInit() {
-      this.estados = this.funcoes.listarEstados();
-      this.raimoCpf = [{ nome: 'Robson', cpf: '25604669881' }, { nome: 'Adriano', cpf: '26235378791' },
-      { nome: 'Pereira', cpf: '1234567890' }, { nome: 'Brito', cpf: null }];
+    private routerService: Router) { }
+
+  ngOnInit() {
+    this.estados = this.funcoes.listarEstados();
+    this.raimoCpf = [{ nome: 'Raimo', cpf: '07980984145' }, { nome: 'Eduardo', cpf: '44101906874' }, {nome:'Victor', cpf: null}];
 
 
-      //usario raimo
-      console.log(this.funcoes.eImpar(99));
-      console.log(this.estados);
-      console.log(this.raimoCpf[1].nome.length);
+    //usario raimo
+    console.log(this.funcoes.eImpar(99));
+    console.log(this.estados);
+    console.log(this.raimoCpf[1].nome.length);
 
 
-    }
+  }
 
 }
