@@ -21,8 +21,7 @@ export class RaimoHomePage implements OnInit {
 
   usuario: UsuarioLogado = new UsuarioLogado(null, null);
 
-  //variavel 
-  amigosRaimo: any[];
+
 
   constructor(private router: Router,
     private util: UtilsService) {
@@ -31,7 +30,6 @@ export class RaimoHomePage implements OnInit {
 
   ngOnInit() {
     this.toast('SEJA BEM VINDO A PÁGINA RUBRO NEGRA');
-    this.amigosRaimo = [{nome: "Eduardo", cpf: "07980984145"},{nome: "vitor", cpf: "80450245811"}];
   }
 
 

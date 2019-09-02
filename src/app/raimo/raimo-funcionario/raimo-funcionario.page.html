@@ -1,5 +1,8 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
     <ion-title color="primary">Cadastro de Funcionário</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -92,12 +95,28 @@
 
     </ion-select>
   </ion-item>
- 
+
   <ion-item>
     <select name="cars">
       <option *ngFor="let uf of estados" value="uf.sigla">{{ uf.sigla }} - {{ uf.nome }}</option>
     </select>
   </ion-item>
+
+  <ion-item>
+    <ion-button type="submit" color="danger">
+      <ion-label position="stacked">ENVIAR</ion-label>
+    </ion-button>
+  </ion-item>
+
+  <ion-item *ngFor="let meusUsuarios of usuariosCpfs">
+    {{usariosRaimo.nome}} - {{usuariosRaimo.cpf}} - {{usuariosRaimo.cpf | cpfRaimo}}
+  </ion-item>
+  <!--
+<h2>Usuários cadastrados</h2>
+<ion-item *ngFor="let cadastrado of usuarios">
+  {{ cadastrado.nome}} - {{ cadastrado.email }} - {{ cadastrado.horaLogin }}
+</ion-item>
+-->
 
 
 </ion-content>
