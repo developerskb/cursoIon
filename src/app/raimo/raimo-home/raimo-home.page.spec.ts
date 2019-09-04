@@ -2,6 +2,7 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { RaimoHomePage } from './raimo-home.page';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('RaimoHomePage', () => {
   let component: RaimoHomePage;
@@ -9,6 +10,7 @@ describe('RaimoHomePage', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [ RaimoHomePage ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     })

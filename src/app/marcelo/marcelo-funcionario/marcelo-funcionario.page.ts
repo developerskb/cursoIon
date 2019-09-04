@@ -38,7 +38,44 @@ export class MarceloFuncionarioPage implements OnInit {
 
   validarCampos(): boolean {
     this.eMaior(this.funcionario.dataNascimento);
-    if (this.utils.campoVazio(this.funcionario.nome)) {
+
+    let condicao: boolean; // true or false
+    let valor1 = 1;
+    let valor2 = 2;
+    condicao = valor1 == valor2; //false
+
+    //operadores logicos
+    //! negação ex. !true = false; !false = true;
+    // == é igual
+    // != é diferente
+    // > é maior
+    // < é menor
+    // >= é maior ou igual
+    // <= é menor ou igual
+    let idade = 15; //anos
+    //verificar se é maior de idade
+    if (idade < 18) {
+      //vc não pode ser menor de idade
+    }
+    else {
+      //vc é maior de idade
+    }
+
+    let mensagem = idade < 18 ? "vc não pode ser menor de idade" : "vc é maior de idade";
+
+    if (valor1 == valor2) {
+      //verdadeiro ;
+      //linha1;
+      //linha2;
+    }
+    if (!(valor1 != valor2)) { //true
+      //falso
+      //outra linha1
+    }
+
+    //proxima
+
+    if (this.utils.campoVazio(this.funcionario.nome)) { //true or false
       this.utils.showAlert("Preencher o Nome", "Erro!");
       return false;
     } else

@@ -9,4 +9,11 @@ describe('UtilsService', () => {
     const service: UtilsService = TestBed.get(UtilsService);
     expect(service).toBeTruthy();
   });
+
+  it('campo esta vazio', () => {
+    const service: UtilsService = TestBed.get(UtilsService);
+    let param: string = '';
+    let result = service.campoVazio(param);
+    expect(false).toEqual(result);
+  })
 });

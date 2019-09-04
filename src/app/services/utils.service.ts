@@ -47,8 +47,11 @@ export class UtilsService {
     return resultado;
   }
 
-  campoVazio(valor: string): boolean {    
-    if (valor == null || valor.trim() == '') {
+  campoVazio(valor: string): boolean {        
+    //console.log('victor@email.com'.toUpperCase().trim().substring(0,5).concat('...')); //= string
+    //console.log('valido', 'victoremail'.indexOf('@'));
+
+    if (valor == null || valor.trim() == '') { 
       return true;
     } else {
       return false;

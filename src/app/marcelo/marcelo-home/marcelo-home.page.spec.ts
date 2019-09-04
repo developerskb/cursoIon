@@ -2,6 +2,9 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MarceloHomePage } from './marcelo-home.page';
+import { CpfMarceloPipe } from 'src/app/pipes/cpf-marcelo.pipe';
+
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('MarceloHomePage', () => {
   let component: MarceloHomePage;
@@ -9,8 +12,10 @@ describe('MarceloHomePage', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MarceloHomePage ],
+      imports: [RouterTestingModule],
+      declarations: [ MarceloHomePage, CpfMarceloPipe ],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
+      
     })
     .compileComponents();
   }));

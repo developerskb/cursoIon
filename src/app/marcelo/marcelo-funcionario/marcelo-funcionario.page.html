@@ -9,70 +9,75 @@
 
 <ion-content>
   <!--Campos-->
-  <ion-item>
-    <ion-label position="floating">Informe o Nome</ion-label>
-    <ion-input type="text" [(ngModel)]="funcionario.nome"></ion-input>
-  </ion-item>
+  <ion-list lines="none">
+    <ion-item>
+      <ion-label position="floating">Informe o Nome</ion-label>
+      <ion-input type="text" [(ngModel)]="funcionario.nome"></ion-input>
+    </ion-item>
 
-  <ion-item>
-    <ion-label position="stacked">Informe a Dt Nascimento</ion-label>
-    <ion-input type="date" style="width: 200px;" [(ngModel)]="funcionario.dataNascimento"></ion-input>
-  </ion-item>
+    <ion-item>
+      <ion-label position="stacked">Informe a Dt Nascimento</ion-label>
+      <ion-input type="date" style="width: 200px;" [(ngModel)]="funcionario.dataNascimento"></ion-input>
+    </ion-item>
 
-  <ion-list>
-    <ion-radio-group [(ngModel)]="funcionario.sexo">
-      <ion-list-header>Informe o Sexo</ion-list-header>
-      <ion-item lines="none" style="margin-left: 35px">
-        <ion-label>Masculino</ion-label>
-        <ion-radio [value]="M"></ion-radio>
-      </ion-item>
-      <ion-item lines="none" style="margin-left: 35px">
-        <ion-label>Feminino</ion-label>
-        <ion-radio [value]="F"></ion-radio>
-      </ion-item>
-      <ion-item lines="none" style="margin-left: 35px">
-        <ion-label>Outro</ion-label>
-        <ion-radio [value]="O" checked="True"></ion-radio>
-      </ion-item>
-    </ion-radio-group>
+    <ion-list>
+      <ion-radio-group [(ngModel)]="funcionario.sexo">
+        <ion-list-header>Informe o Sexo</ion-list-header>
+        <ion-item lines="none" style="margin-left: 35px">
+          <ion-label>Masculino</ion-label>
+          <ion-radio [value]="M"></ion-radio>
+        </ion-item>
+        <ion-item lines="none" style="margin-left: 35px">
+          <ion-label>Feminino</ion-label>
+          <ion-radio [value]="F"></ion-radio>
+        </ion-item>
+        <ion-item lines="none" style="margin-left: 35px">
+          <ion-label>Outro</ion-label>
+          <ion-radio [value]="O" checked="True"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+
+
+    <ion-item>
+      <ion-label position="floating">Informe o E-mail</ion-label>
+      <ion-input type="email" [(ngModel)]="funcionario.email"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Gerente</ion-label>
+      <ion-checkbox [(ngModel)]="funcionario.gerente"></ion-checkbox>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Informe o Salário</ion-label>
+      <ion-input type="number" [(ngModel)]="funcionario.salario"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Informe o Telefone com DDD (Somente números)</ion-label>
+      <ion-input type="text" maxLength="11" [(ngModel)]="funcionario.telefone"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{funcionario.telefone | telefoneMarcelo}}</ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Observações</ion-label>
+      <ion-textarea rows="4" [(ngModel)]="funcionario.observacao"></ion-textarea>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Selecionar o Estado</ion-label>
+      <ion-select [(ngModel)]="funcionario.estado">
+        <!--<ion-select-option *ngFor="let uf of estados" [value]="uf">{{ uf.nome }}</ion-select-option>-->
+        <ion-select-option *ngFor="let uf of estados" [value]="uf"><span *ngIf=uf.sigla>{{ uf.sigla }} -
+            {{ uf.nome }}</span></ion-select-option>
+      </ion-select>
+    </ion-item>
+
   </ion-list>
-
-  <ion-item>
-    <ion-label position="floating">Informe o E-mail</ion-label>
-    <ion-input type="text" [(ngModel)]="funcionario.email"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Gerente</ion-label>
-    <ion-checkbox [(ngModel)]="funcionario.gerente"></ion-checkbox>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="floating">Informe o Salário</ion-label>
-    <ion-input type="number" [(ngModel)]="funcionario.salario"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="floating">Informe o Telefone com DDD (Somente números)</ion-label>
-    <ion-input type="text" maxLength="11" [(ngModel)]="funcionario.telefone"></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>{{funcionario.telefone | telefoneMarcelo}}</ion-label>
-  </ion-item>
-
-  <ion-item>
-    <ion-label>Observações</ion-label>
-    <ion-textarea rows="4" [(ngModel)]="funcionario.observacao"></ion-textarea>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="floating">Selecionar o Estado</ion-label>
-    <ion-select [(ngModel)]="funcionario.estado">
-      <!--<ion-select-option *ngFor="let uf of estados" [value]="uf">{{ uf.nome }}</ion-select-option>-->
-      <ion-select-option *ngFor="let uf of estados" [value]="uf"><span *ngIf=uf.sigla>{{ uf.sigla }} -
-          {{ uf.nome }}</span></ion-select-option>
-    </ion-select>
-  </ion-item>
 </ion-content>
 <ion-footer>
   <ion-button expand="block" (click)="salvarDados()">Salvar</ion-button>
