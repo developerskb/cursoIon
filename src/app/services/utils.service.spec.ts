@@ -14,6 +14,6 @@ describe('UtilsService', () => {
     const service: UtilsService = TestBed.get(UtilsService);
     let param: string = '';
     let result = service.campoVazio(param);
-    expect(false).toEqual(result);
+    expect(true).toEqual(result);
   })
 });
