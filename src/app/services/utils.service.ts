@@ -33,7 +33,7 @@ export class UtilsService {
 
   //
   eImpar(numero: number): boolean {
-    return numero % 2 != 0;
+    return numero % 2 == 0;
   }
 
   //retorna lista com quatro estados
