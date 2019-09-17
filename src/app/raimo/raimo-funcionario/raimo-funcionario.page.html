@@ -103,14 +103,13 @@
   </ion-item>
 
   <ion-item>
-    <ion-button type="submit" color="danger">
-      <ion-label position="stacked">ENVIAR</ion-label>
-    </ion-button>
+    <ion-label color="primary" position="floating">CPF</ion-label>
+    <ion-input type="number" placeholder="Digite seu CPF"></ion-input>
   </ion-item>
 
-  <ion-item *ngFor="let usuariosRaimo of raimoCpf">
-    {{usuariosRaimo.nome}} - {{usuariosRaimo.cpf}} - {{usuariosRaimo.cpf | cpfRaimo}}
-  </ion-item>
+
+  <ion-button expand="block" (click)="validar()" color="danger">Salvar
+  </ion-button>
   <!--
 <h2>Usuários cadastrados</h2>
 <ion-item *ngFor="let cadastrado of usuarios">
