@@ -1,0 +1,61 @@
+Forms 
+FormGroup
+<form [formGroup]="empresaForm" (ngSubmit)="salvar()">
+
+Control binding: formControlName
+<ion-item>
+    <ion-label position="stacked">Razão</ion-label>
+    <ion-input formControlName="nome" type="text" placeholder="Razão" maxLength="120"></ion-input>
+</ion-item>
+
+Mensagem Validação
+<div class="validation-errors">
+    <ng-container *ngFor="let validation of validation_messages.nome">
+        <div class="error-message"
+            *ngIf="empresaForm.get('nome').hasError(validation.type) && (empresaForm.get('nome').dirty || empresaForm.get('nome').touched)">
+            {{ validation.message }}
+        </div>
+    </ng-container>
+</div>
+
+Submit
+<div padding>
+    <ion-button type="submit" [disabled]="empresaForm.invalid" expand="block">Salvar</ion-button>
+</div>
+
+
+TS
+
+FormGroup
+empresaForm: FormGroup;
+
+Validation
+
+  validation_messages = {
+    'nome': [ //nome do campo no form
+      { type: 'required', message: 'Digitar a razão social.' },
+      { type: 'minlength', message: 'O nome deve ter no mínimo 5 caracteres.' },
+      { type: 'pattern', message: 'Precisa ter mais de um nome.' }
+    ]}
+
+FormBuilder 
+
+this.empresaForm = this.formBuilder.group({
+      empresaId: ['0'],
+      nome: ['', [Validators.required, Validators.minLength(5)]],
+      fantasia: ['', [Validators.required, Validators.minLength(2)]],
+});     
+
+Set value
+//inicializar campos
+    this.empresaForm.setValue({
+        empresaId: 1,
+        nome: 'App project',
+        fantasia: 'App'
+    });
+        
+
+salvar() {
+
+    console.log(this.empresaForm.value);
+}

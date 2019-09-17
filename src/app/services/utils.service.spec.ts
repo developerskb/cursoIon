@@ -16,4 +16,11 @@ describe('UtilsService', () => {
     let result = service.campoVazio(param);
     expect(true).toEqual(result);
   })
+
+  it('é impar', () => {
+    const service: UtilsService = TestBed.get(UtilsService);
+    let param: number = 3;
+    let result = service.eImpar(param);
+    expect(true).toEqual(result);
+  })
 });

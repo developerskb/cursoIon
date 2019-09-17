@@ -20,7 +20,7 @@ export class UsuarioLogado implements Usuario {
     dataNascimento: string;
 
 
-    constructor(_horaLogin: string, _token: string) {
+    constructor(_horaLogin?: string, _token?: string) {
         this.horaLogin = _horaLogin;
         this.token = _token;
     }
