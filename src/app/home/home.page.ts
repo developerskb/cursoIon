@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Usuario, UsuarioLogado } from '../model/usuario';
+import { UtilsService } from '../services/utils.service';
 
 @Component({
   selector: 'app-home',
@@ -14,7 +15,7 @@ export class HomePage implements OnInit {
   usuarioLogado: Usuario;
   usuarioLogadoNaClasse: UsuarioLogado;
   usuarios: UsuarioLogado[] = []; //[usuario1,usuario2.....]
-  constructor(private router: Router) {
+  constructor(private router: Router, private utils: UtilsService) {
 
   }
 
@@ -42,6 +43,7 @@ export class HomePage implements OnInit {
       administrador: true      
     };
 */
+    this.utils.tipos();
   }
   
   

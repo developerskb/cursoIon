@@ -19,7 +19,7 @@ export class UsuarioLogado implements Usuario {
     estado: string;
 
 
-    constructor(_horaLogin: string, _token: string) {
+    constructor(_horaLogin?: string, _token?: string) {
         this.horaLogin = _horaLogin;
         this.token = _token;
     }
