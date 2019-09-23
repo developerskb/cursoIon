@@ -10,9 +10,8 @@ import { Usuario, UsuarioLogado } from 'src/app/model/usuario';
 })
 export class RaimoFuncionarioPage implements OnInit {
   estados: Estado[];
+
   usuario: UsuarioLogado;
-
-
 
 
   constructor(private utils: UtilsService) { }
@@ -32,9 +31,6 @@ export class RaimoFuncionarioPage implements OnInit {
     console.log('meu usuario:', this.usuario);
     if (this.utils.campoVazio(this.usuario.nome)) {
       this.utils.showAlert('Informe o Nome');
-    }
-    if (this.utils.campoVazio(this.usuario.estado)) {
-      this.utils.showAlert('Informe o Estado');
     }
   }
 }

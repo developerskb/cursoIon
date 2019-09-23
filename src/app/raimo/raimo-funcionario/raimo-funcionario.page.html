@@ -7,10 +7,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
   <ion-item>
     <ion-label color="primary" position="floating">Nome</ion-label>
-    <ion-input type="text" placeholder="Digite seu nome"></ion-input>
+    <ion-input type="text" [(ngModel)]="usuario.nome"></ion-input>
   </ion-item>
 
   <ion-item>
