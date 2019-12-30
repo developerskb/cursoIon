@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Estado } from 'src/app/model/estado';
 import { UtilsService } from 'src/app/services/utils.service';
-import { Router } from '@angular/router';
+import { Usuario, UsuarioLogado } from 'src/app/model/usuario';
 
 @Component({
   selector: 'app-raimo-funcionario',
@@ -10,27 +10,37 @@ import { Router } from '@angular/router';
 })
 export class RaimoFuncionarioPage implements OnInit {
   estados: Estado[];
-  router: any[];
-  raimoCpf: any[]
-  usuariosRaimo: any[];
+
+  usuario: UsuarioLogado;
 
 
-
-
-  constructor(private funcoes: UtilsService,
-    private routerService: Router) { }
+  constructor(private utils: UtilsService) { }
 
   ngOnInit() {
-    this.estados = this.funcoes.listarEstados();
-    this.raimoCpf = [{ nome: 'Raimo', cpf: '07980984145' }, { nome: 'Eduardo', cpf: '44101906874' }, {nome:'Victor', cpf: null}];
+    //this.nome = 'do banco de dados';
+    this.usuario = new UsuarioLogado(null, null);
+    //this.usuario.nome = 'teste'
+    this.usuario.sexo = 'M';
+    this.estados = this.utils.listarEstados();
 
 
-    //usario raimo
-    console.log(this.funcoes.eImpar(99));
+    //usuario raimo
+    console.log(this.utils.eImpar(99));
     console.log(this.estados);
-    console.log(this.raimoCpf[1].nome.length);
-
-
   }
-
+  validar() {
+    console.log('meu usuario:', this.usuario);
+    if (this.utils.campoVazio(this.usuario.nome)) {
+      this.utils.showAlert('Informe o Nome', "Campo Vazio!");
+    }  
+    if (this.utils.campoVazio(this.usuario.dataNascimento)) {
+      this.utils.showAlert("Informe a Data de Nascimento", "Campo Vazio!");
+    }
+    if (this.utils.campoVazio(this.usuario.email)) {
+      this.utils.showAlert('Informe o Email', "Campo Vazio!");
+    }
+    if (this.utils.campoVazio(this.usuario.estado)) {
+      this.utils.showAlert('Informe o Estado', "Campo Vazio!");
+    } 
+  }
 }

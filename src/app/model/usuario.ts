@@ -17,6 +17,7 @@ export class UsuarioLogado implements Usuario {
     token: string;
     sexo: string;
     estado: string;
+    dataNascimento: string;
 
 
     constructor(_horaLogin?: string, _token?: string) {

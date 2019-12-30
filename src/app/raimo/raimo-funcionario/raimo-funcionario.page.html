@@ -7,23 +7,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
   <ion-item>
     <ion-label color="primary" position="floating">Nome</ion-label>
-    <ion-input type="text" placeholder="Digite seu nome"></ion-input>
+    <ion-input type="text" [(ngModel)]="usuario.nome"></ion-input>
   </ion-item>
 
   <ion-item>
     <ion-label color="primary" position="stacked">Data de Nascimento</ion-label>
-    <ion-input style="width: 200px;" type="date" placeholder="Selecione uma data"></ion-input>
+    <ion-input type="date" style="width: 200px;" [(ngModel)]="usuario.dataNascimento"></ion-input>
   </ion-item>
 
   <ion-list>
-    <ion-radio-group>
+    <ion-radio-group [(ngModel)]="usuario.sexo">
       <ion-list-header>
-        <ion-item>
-          <ion-label color="primary">Sexo</ion-label>
-        </ion-item>
+      Sexo
       </ion-list-header>
       <ion-item>
         <ion-label>Masculino</ion-label>
@@ -42,7 +40,7 @@
 
   <ion-item>
     <ion-label color="primary" position="stacked">E-mail</ion-label>
-    <ion-input type="email"></ion-input>
+    <ion-input type="email" [(ngModel)]="usuario.email"></ion-input>
   </ion-item>
 
   <ion-item>
@@ -57,12 +55,12 @@
 
   <ion-item>
     <ion-label color="primary">Telefone</ion-label>
-    <ion-input type="number" placeholder="(99) 99999-9999"></ion-input>
+    <ion-input type="number" [(ngModel)]="usuario.celular"></ion-input>
   </ion-item>
   <ion-item>
     <ion-label color="primary" position="stacked">Estado</ion-label>
 
-    <ion-select placeholder="Selecionar...">
+    <ion-select [(ngModel)]="usuario.estado" placeholder="Selecionar...">
       <ion-select-option value="AC">Acre</ion-select-option>
       <ion-select-option value="AL">Alagoas</ion-select-option>
       <ion-select-option value="AP">Amapá</ion-select-option>
@@ -91,26 +89,19 @@
       <ion-select-option value="SE">Sergipe</ion-select-option>
       <ion-select-option value="TO">Tocantins</ion-select-option>
 
-
-
+      <ion-select-option *ngFor="let uf of estados" value="uf.sigla">{{ uf.sigla }} - {{ uf.nome }}</ion-select-option>
     </ion-select>
   </ion-item>
 
-  <ion-item>
-    <select name="cars">
-      <option *ngFor="let uf of estados" value="uf.sigla">{{ uf.sigla }} - {{ uf.nome }}</option>
-    </select>
-  </ion-item>
 
   <ion-item>
-    <ion-button type="submit" color="danger">
-      <ion-label position="stacked">ENVIAR</ion-label>
-    </ion-button>
+    <ion-label color="primary" position="floating">CPF</ion-label>
+    <ion-input type="number" placeholder="Digite seu CPF"></ion-input>
   </ion-item>
 
-  <ion-item *ngFor="let usuariosRaimo of raimoCpf">
-    {{usuariosRaimo.nome}} - {{usuariosRaimo.cpf}} - {{usuariosRaimo.cpf | cpfRaimo}}
-  </ion-item>
+
+  <ion-button expand="block" (click)="validar()" color="danger">Salvar
+  </ion-button>
   <!--
 <h2>Usuários cadastrados</h2>
 <ion-item *ngFor="let cadastrado of usuarios">
